@@ -6,15 +6,17 @@ import Footer from "../Footer/footer";
 import "./layout.scss";
 import SmallNav from "../SmallNav/smallNav";
 import Experience from "../Experience/experience";
+import WorkExperience from "../WorkExperience/workExperience";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
       <Waves />
-      <SmallNav/>
+      <SmallNav />
       <About />
-      <Experience/>
+      <Experience />
+      <WorkExperience />
       <Contact />
       <Footer />
     </>

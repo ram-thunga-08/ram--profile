@@ -1,0 +1,58 @@
+export const workExperienceData = [
+  {
+    id: 1,
+    title: "Senior Frontend Developer",
+    company: "Picton Mahoney Asset Management",
+    duration: "March 2023 - Present",
+    location: "Toronto, ON",
+    responsibilities: [
+      "Led the development of responsive web applications using React.js, Next.js, and TypeScript",
+      "Implemented modern UI frameworks like Tailwind CSS and Material UI for enhanced user experience",
+      "Optimized application performance and ensured accessibility compliance (WCAG)",
+      "Collaborated with cross-functional teams to deliver high-quality software solutions",
+      "Mentored junior developers and conducted code reviews to maintain code quality standards",
+    ],
+  },
+  {
+    id: 2,
+    title: "Frontend Developer",
+    company: "Tech Solutions Inc.",
+    duration: "January 2020 - February 2023",
+    location: "Toronto, ON",
+    responsibilities: [
+      "Developed scalable web applications using React.js and modern JavaScript frameworks",
+      "Built reusable and testable components for improved development efficiency",
+      "Implemented responsive design principles for optimal cross-device compatibility",
+      "Worked with RESTful APIs and integrated with backend services",
+      "Participated in agile development processes and sprint planning",
+    ],
+  },
+  {
+    id: 3,
+    title: "Web Developer",
+    company: "Digital Innovation Ltd.",
+    duration: "June 2018 - December 2019",
+    location: "Toronto, ON",
+    responsibilities: [
+      "Created interactive user interfaces using HTML5, CSS3, and JavaScript",
+      "Developed responsive websites and web applications for various clients",
+      "Collaborated with designers to translate mockups into functional web components",
+      "Implemented cross-browser compatibility and performance optimizations",
+      "Maintained and updated existing web applications",
+    ],
+  },
+  {
+    id: 4,
+    title: "Junior Frontend Developer",
+    company: "StartUp Ventures",
+    duration: "September 2016 - May 2018",
+    location: "Toronto, ON",
+    responsibilities: [
+      "Assisted in developing user-facing features using modern JavaScript frameworks",
+      "Learned and applied best practices in frontend development",
+      "Contributed to the development of responsive and mobile-first designs",
+      "Participated in team meetings and contributed to technical discussions",
+      "Gained experience with version control systems and collaborative development",
+    ],
+  },
+];
