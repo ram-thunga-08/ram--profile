@@ -9,16 +9,15 @@ import Experience from "../Experience/experience";
 
 const Layout = () => {
   return (
-    <h1>this is layout</h1>
-    // <>
-    //   <Navbar />
-    //   <Waves />
-    //   <SmallNav/>
-    //   <About />
-    //   <Experience/>
-    //   <Contact />
-    //   <Footer />
-    // </>
+    <>
+      <Navbar />
+      <Waves />
+      <SmallNav/>
+      <About />
+      <Experience/>
+      <Contact />
+      <Footer />
+    </>
   );
 };
 

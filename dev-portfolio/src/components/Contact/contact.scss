@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@use '../../App.scss' as *;
 
 .contact__container {
     background-color: $container-bg;

@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@use '../../App.scss' as *;
 .nav-bar {
     width: 100%;
     position: relative;

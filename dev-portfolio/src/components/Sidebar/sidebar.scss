@@ -1,7 +1,6 @@
-@import '../../App.scss';
+@use '../../App.scss' as *;
 .sidebar {
     display: flex;
-    gap: 40px;
     align-items: center;
     margin-right: 40px;
 
