@@ -3,6 +3,7 @@
 .work-experience__container {
     width: $container-width-lg;
     position: relative;
+    padding:0;
     z-index: 1; // Same as other containers to be above waves
     
     .work-experience__carousel {
