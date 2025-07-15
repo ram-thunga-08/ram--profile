@@ -25,10 +25,10 @@ const SmallNav = () => {
         <BiUser />
       </a>
       <a
-        href="#experience"
-        onClick={() => setActiveNav("#experience")}
-        className={activeNav === "#experience" ? "active" : ""}
-        aria-label="Experience"
+        href="#skills"
+        onClick={() => setActiveNav("#skills")}
+        className={activeNav === "#skills" ? "active" : ""}
+        aria-label="skills"
       >
         <BiBookBookmark />
       </a>

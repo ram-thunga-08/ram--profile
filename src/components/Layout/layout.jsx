@@ -5,7 +5,7 @@ import Waves from "../Waves/waves";
 import Footer from "../Footer/footer";
 import "./layout.scss";
 import SmallNav from "../SmallNav/smallNav";
-import Experience from "../Experience/experience";
+import Skills from "../Skills/skills";
 import WorkExperience from "../WorkExperience/workExperience";
 
 const Layout = () => {
@@ -15,7 +15,7 @@ const Layout = () => {
       <Waves />
       <SmallNav />
       <About />
-      <Experience />
+      <Skills />
       <WorkExperience />
       <Contact />
       <Footer />

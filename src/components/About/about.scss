@@ -13,67 +13,88 @@
         text-align: justify;
     }
 
+    .content.flex-centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-container-centered {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
     .about-me-section {
         margin-top: 20px;
         display: flex;
         grid-gap: 100px;
-        color:$bone;
+        color: $bone;
 
         @include mobile {
             grid-gap: 20px;
         }
 
-        .about-me-pic {
-            width: 50%;
-            display: flex;
-            justify-content: flex-end;
-            img {
-                width: 300px;
-                height: 300px;
-                border-radius: 10px;
-            }
-        }
-        .about-me-description {
-            width: 50%;
+        .about-me-left {
+            width: 40%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             grid-gap: 30px;
-            color: $bone;
-
+            
+            .about-me-pic {
+                display: flex;
+                justify-content: center;
+                
+                img {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 10px;
+                }
+            }
+            
             .about__cards {
                 display: flex;
                 grid-gap: 20px;
+                justify-content: center;
+            }
+        }
+        
+        .about-me-description {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $bone;
+        }
+        
+        .about__card {
+            border: 1px $bone solid;
+            width: 140px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
 
-                .about__card {
-                    border: 1px $bone solid;
-                    width: 140px;
-                    border-radius: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    padding: 20px;
+            &:hover {
+                background-color: $bone;
+                color: $black;
+                transition: $transition;
+            }
 
-                    &:hover {
-                        background-color: $bone;
-                        color: $black;
-                        transition: $transition;
-                    }
+            .about__card-icon {
+                margin-bottom: 15px;
+            }
 
-                    .about__card-icon {
-                        margin-bottom: 15px;
-                    }
-
-                    small {
-                        font-size: 0.7rem;
-                        margin-top: 4px;
-                    }
-                }
+            small {
+                font-size: 0.7rem;
+                margin-top: 4px;
             }
         }
     }
-    
 }
 
 /* ============== MEDIA QUERIES (MEDIUM DEVICES) =============== */
@@ -83,19 +104,25 @@
             flex-direction: column;
             align-items: center;
 
-            .about-me-pic {
+            .about-me-left {
                 width: 100%;
-                justify-content: center;
             }
 
             .about-me-description {
                 width: 100%;
                 align-items: center;
+                text-align: center;
+                
+                p {
+                    text-align: center;
+                }
             }
         }
-
+        
+        .btn-container-centered {
+            margin-top: 30px;
+        }
     }
-   
 }
 
 /* ============== MEDIA QUERIES (SMALL DEVICES) =============== */

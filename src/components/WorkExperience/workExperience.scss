@@ -79,11 +79,26 @@
 
     .work-experience__header {
         display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        justify-content: space-between;
+        align-items: flex-start;
         margin-bottom: 1.5rem;
         border-bottom: 1px solid rgba($bone, 0.2);
         padding-bottom: 1rem;
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            // gap: 0.3rem;
+            max-width: 65%;
+        }
+        
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            text-align: right;
+            max-width: 35%;
+        }
 
         h3 {
             color: $bone;
@@ -94,7 +109,7 @@
 
         .company {
             color: rgba($bone, 0.9);
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
         }
 
@@ -199,7 +214,11 @@
             h3 {
                 font-size: 1.3rem;
             }
-
+            
+            .header-left, .header-right {
+                max-width: 50%;
+            }
+            
             .company {
                 font-size: 1.1rem;
             }
@@ -230,6 +249,20 @@
         .work-experience__header {
             h3 {
                 font-size: 1.2rem;
+            }
+
+            .header-left, .header-right {
+                max-width: 100%;
+            }
+            
+            // For very small screens, stack the header elements
+            @media (max-width: 480px) {
+                flex-direction: column;
+                
+                .header-right {
+                    margin-top: 0.5rem;
+                    text-align: left;
+                }
             }
 
             .company {

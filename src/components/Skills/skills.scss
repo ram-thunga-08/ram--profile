@@ -1,0 +1,141 @@
+@use "../../App.scss" as *;
+
+.skills__container {
+    width: $container-width-md;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.skills__block {
+    display: flex;
+    width: 90%;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @include tab-and-mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include mobile {
+        gap: 1rem;
+    }
+}
+
+.skills__categories {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: $container-bg;
+    border: 1px solid $container-bg;
+    border-radius: 10px;
+    padding: 2rem;
+    height: fit-content;
+
+    @include tab {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+        flex: 0 0 auto;
+    }
+
+    @include mobile {
+        padding: 1.5rem;
+        width: 100%;
+    }
+}
+
+.skills__category {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $transition;
+    border: 1px solid transparent;
+    font-weight: 500;
+
+    &:hover {
+        border: 1px solid $bone;
+        background-color: rgba($black, 0.6);
+        color: $bone;
+    }
+
+    &.active {
+        border: 1px solid $bone;
+        background-color: $black;
+        color: $bone;
+    }
+}
+
+.skills__details-container {
+    flex: 1;
+    background: $container-bg;
+    border: 1px solid $container-bg;
+    padding: 2.4rem 3rem;
+    border-radius: 10px;
+    transition: $transition;
+
+    @include tab {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    @include mobile {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    &:hover {
+        border: 1px solid $bone;
+        background-color: $black;
+        color: $bone;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .skills__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+
+        @include tab-and-mobile {
+            padding: 0;
+            gap: 1rem;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        .skills__details {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .skills__icon {
+                margin-top: 6px;
+                color: $bone;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0;
+                margin: 0;
+                
+                .text-light {
+                    opacity: 0.8;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

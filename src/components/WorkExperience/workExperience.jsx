@@ -73,10 +73,14 @@ const WorkExperience = () => {
               {workExperienceData.map((experience) => (
                 <div key={experience.id} className="work-experience__item">
                   <div className="work-experience__header">
-                    <h3>{experience.title}</h3>
-                    <span className="company">{experience.company}</span>
-                    <span className="duration">{experience.duration}</span>
-                    <span className="location">{experience.location}</span>
+                    <div className="header-left">
+                      <h3>{experience.title}</h3>
+                      <span className="company">{experience.company}</span>
+                    </div>
+                    <div className="header-right">
+                      <span className="duration">{experience.duration}</span>
+                      {/* <span className="location">{experience.location}</span> */}
+                    </div>
                   </div>
                   <div className="work-experience__details">
                     <ul>
