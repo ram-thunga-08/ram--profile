@@ -66,6 +66,16 @@
             flex-direction: column;
             justify-content: center;
             color: $bone;
+            
+            p {
+                margin-bottom: 20px;
+            }
+            
+            .second-paragraph {
+                margin-top: 10px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
         }
         
         .about__card {

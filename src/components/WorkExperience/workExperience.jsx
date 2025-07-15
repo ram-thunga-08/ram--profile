@@ -5,20 +5,20 @@ import { workExperienceData } from "../../constants/workExperienceData";
 
 const WorkExperience = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  // const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Auto-play functionality
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === workExperienceData.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 5000); // Change slide every 5 seconds
+  // useEffect(() => {
+  //   if (isAutoPlaying) {
+  //     const interval = setInterval(() => {
+  //       setCurrentIndex((prevIndex) =>
+  //         prevIndex === workExperienceData.length - 1 ? 0 : prevIndex + 1
+  //       );
+  //     }, 5000); // Change slide every 5 seconds
 
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying]);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [isAutoPlaying]);
 
   const nextSlide = () => {
     setCurrentIndex(
@@ -49,7 +49,7 @@ const WorkExperience = () => {
               className="carousel-btn prev-btn"
               onClick={prevSlide}
               onMouseEnter={() => setIsAutoPlaying(false)}
-              onMouseLeave={() => setIsAutoPlaying(true)}
+              // onMouseLeave={() => setIsAutoPlaying(true)}
             >
               ‹
             </button>
@@ -57,7 +57,7 @@ const WorkExperience = () => {
               className="carousel-btn next-btn"
               onClick={nextSlide}
               onMouseEnter={() => setIsAutoPlaying(false)}
-              onMouseLeave={() => setIsAutoPlaying(true)}
+              // onMouseLeave={() => setIsAutoPlaying(true)}
             >
               ›
             </button>
@@ -68,7 +68,7 @@ const WorkExperience = () => {
               className="work-experience__slides"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               onMouseEnter={() => setIsAutoPlaying(false)}
-              onMouseLeave={() => setIsAutoPlaying(true)}
+              // onMouseLeave={() => setIsAutoPlaying(true)}
             >
               {workExperienceData.map((experience) => (
                 <div key={experience.id} className="work-experience__item">

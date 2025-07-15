@@ -2,6 +2,7 @@ import "./about.scss";
 import myProfile from "../../assets/images/myImage.jpg";
 import { BsAward } from "react-icons/bs";
 import { VscFolderLibrary } from "react-icons/vsc";
+import { aboutData } from "./aboutData";
 
 const About = () => {
   return (
@@ -19,27 +20,18 @@ const About = () => {
               <article className="about__card">
                 <BsAward className="about__card-icon" />
                 <h5>Experience</h5>
-                <small>8+ Years Working</small>
+                <small>{aboutData.experienceCount}</small>
               </article>
               <article className="about__card">
                 <VscFolderLibrary className="about__card-icon" />
                 <h5>Projects</h5>
-                <small>15+ Projects</small>
+                <small>{aboutData.projectsCount}</small>
               </article>
             </div>
           </div>
           <div className="about-me-description">
-            <p>
-              Hi, I'm Ramakrishna Tunga, a Senior Frontend Developer at Picton
-              Mahoney Asset Management with over 8 years of experience
-              delivering high-performance, scalable web applications. I
-              specialize in React.js, Next.js, TypeScript, and modern UI
-              frameworks like Tailwind CSS. My expertise includes performance
-              optimization, responsive design, accessibility compliance (WCAG),
-              and building clean, reusable, and testable components. I'm
-              passionate about creating user-centric solutions that drive
-              business value.
-            </p>
+            <p>{aboutData.firstParagraph}</p>
+            <p className="second-paragraph">{aboutData.secondParagraph}</p>
           </div>
         </div>
         <div className="btn-container-centered">

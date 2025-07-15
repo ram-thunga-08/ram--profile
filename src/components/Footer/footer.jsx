@@ -1,8 +1,6 @@
 import "./footer.scss";
 import {
-  faTwitter,
   faLinkedin,
-  faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <a href="#" className="footer__logo">
-        RAM TUNGA
+        RAMAKRISHNA TUNGA
       </a>
       <ul className="permalinks">
         <li>

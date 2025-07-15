@@ -18,7 +18,6 @@ const Waves = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Target all hexagons elements we have asigned the vector-line class
       gsap.from(".vector-line", {
         duration: 5,
         opacity: 0,
@@ -43,7 +42,6 @@ const Waves = () => {
   return (
     <>
       <div className="header">
-        {/* <!--Content before waves--> */}
         <div
           className="container inner-header flex-centered"
           style={{ transform: `translateY(${offsetY * 0.5}px)` }}
@@ -51,7 +49,6 @@ const Waves = () => {
           <h1>RAMAKRISHNA TUNGA</h1>
           <h4>Senior Frontend Developer</h4>
         </div>
-        {/* <!--Hexagons Container--> */}
         <div className="hexagons" ref={hexagons}>
           <svg
             className="bg-background"
@@ -131,8 +128,6 @@ const Waves = () => {
             </g>
           </svg>
         </div>
-        {/* Hexagons end */}
-        {/* Waves Container */}
         <div>
           <svg
             className="waves"
@@ -171,9 +166,7 @@ const Waves = () => {
             </g>
           </svg>
         </div>
-        {/* <!--Waves end--> */}
       </div>
-      {/* <!--Header ends--> */}
     </>
   );
 };
