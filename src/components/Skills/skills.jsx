@@ -1,6 +1,7 @@
 import "./skills.scss";
 import { HiBadgeCheck } from "react-icons/hi";
-import { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { useState, useEffect } from "react";
 
 const Skills = () => {
   const skillsData = [
@@ -78,6 +79,24 @@ const Skills = () => {
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const toggleMobileDropdown = () => {
+    setIsMobileDropdownOpen(!isMobileDropdownOpen);
+  };
 
   return (
     <section id="skills">
@@ -86,19 +105,55 @@ const Skills = () => {
           <span>Technical Skills</span>
         </div>
         <div className="skills__block">
-          <div className="skills__categories">
-            {skillsData.map((category, index) => (
-              <div
-                key={index}
-                className={`skills__category ${
-                  selectedCategory === index ? "active" : ""
-                }`}
-                onClick={() => setSelectedCategory(index)}
+          {/* Desktop Categories */}
+          {!isMobile && (
+            <div className="skills__categories desktop-categories">
+              {skillsData.map((category, index) => (
+                <div
+                  key={index}
+                  className={`skills__category ${
+                    selectedCategory === index ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedCategory(index)}
+                >
+                  {category.category}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Mobile Dropdown */}
+          {isMobile && (
+            <div className="skills__mobile-dropdown">
+              <div 
+                className={`skills__mobile-selected ${isMobileDropdownOpen ? "active" : ""}`}
+                onClick={toggleMobileDropdown}
               >
-                {category.category}
+                <span>{skillsData[selectedCategory].category}</span>
+                {isMobileDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
               </div>
-            ))}
-          </div>
+              
+              {isMobileDropdownOpen && (
+                <div className="skills__mobile-options">
+                  {skillsData.map((category, index) => (
+                    <div
+                      key={index}
+                      className={`skills__mobile-option ${
+                        selectedCategory === index ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        setSelectedCategory(index);
+                        setIsMobileDropdownOpen(false);
+                      }}
+                    >
+                      {category.category}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="skills__details-container">
             <h3>{skillsData[selectedCategory].category}</h3>
             <div className="skills__content">

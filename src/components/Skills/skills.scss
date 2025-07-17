@@ -49,6 +49,83 @@
     }
 }
 
+.skills__mobile-dropdown {
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 10;
+
+    .skills__mobile-selected {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: $container-bg;
+        border: 1px solid $container-bg;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: $transition;
+        -webkit-tap-highlight-color: transparent;
+
+        &.active, &:active {
+            border: 1px solid $bone;
+            background-color: $black;
+            color: $bone;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                border: 1px solid $bone;
+                background-color: rgba($black, 0.6);
+                color: $bone;
+            }
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    .skills__mobile-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: $container-bg;
+        border: 1px solid $bone;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+        max-height: 300px;
+        overflow-y: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 20;
+
+        .skills__mobile-option {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: $transition;
+            border-bottom: 1px solid rgba($bone, 0.1);
+            -webkit-tap-highlight-color: transparent;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.active, &:active {
+                background-color: $black;
+                color: $bone;
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: rgba($black, 0.6);
+                    color: $bone;
+                }
+            }
+        }
+    }
+}
+
 .skills__category {
     padding: 1rem 1.5rem;
     border-radius: 5px;
@@ -56,14 +133,17 @@
     transition: $transition;
     border: 1px solid transparent;
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
 
-    &:hover {
-        border: 1px solid $bone;
-        background-color: rgba($black, 0.6);
-        color: $bone;
+    @media (hover: hover) {
+        &:hover {
+            border: 1px solid $bone;
+            background-color: rgba($black, 0.6);
+            color: $bone;
+        }
     }
 
-    &.active {
+    &.active, &:active {
         border: 1px solid $bone;
         background-color: $black;
         color: $bone;
@@ -77,6 +157,7 @@
     padding: 2.4rem 3rem;
     border-radius: 10px;
     transition: $transition;
+    -webkit-tap-highlight-color: transparent;
 
     @include tab {
         width: 80%;
@@ -89,7 +170,15 @@
         width: 100%;
     }
 
-    &:hover {
+    @media (hover: hover) {
+        &:hover {
+            border: 1px solid $bone;
+            background-color: $black;
+            color: $bone;
+        }
+    }
+    
+    &:active {
         border: 1px solid $bone;
         background-color: $black;
         color: $bone;

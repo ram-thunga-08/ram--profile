@@ -49,6 +49,7 @@ const WorkExperience = () => {
               className="carousel-btn prev-btn"
               onClick={prevSlide}
               onMouseEnter={() => setIsAutoPlaying(false)}
+              aria-label="Previous slide"
               // onMouseLeave={() => setIsAutoPlaying(true)}
             >
               ‹
@@ -57,6 +58,7 @@ const WorkExperience = () => {
               className="carousel-btn next-btn"
               onClick={nextSlide}
               onMouseEnter={() => setIsAutoPlaying(false)}
+              aria-label="Next slide"
               // onMouseLeave={() => setIsAutoPlaying(true)}
             >
               ›

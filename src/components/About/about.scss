@@ -120,11 +120,11 @@
 
             .about-me-description {
                 width: 100%;
-                align-items: center;
-                text-align: center;
+                align-items: flex-start;
+                text-align: left;
                 
                 p {
-                    text-align: center;
+                    text-align: left;
                 }
             }
         }
