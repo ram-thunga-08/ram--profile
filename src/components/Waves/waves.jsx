@@ -47,7 +47,7 @@ const Waves = () => {
           style={{ transform: `translateY(${offsetY * 0.5}px)` }}
         >
           <h1>RAMAKRISHNA TUNGA</h1>
-          <h4>Senior Frontend Developer</h4>
+          <h4>Senior Software Developer</h4>
         </div>
         <div className="hexagons" ref={hexagons}>
           <svg

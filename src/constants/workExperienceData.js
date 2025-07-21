@@ -10,9 +10,11 @@ export const workExperienceData = [
 leveraging its server-side rendering (SSR) and static site generation (SSG) capabilities for optimal
 performance and SEO.`,
       `Secured financial reporting interfaces using OAuth 2.0 and JWT with robust token handling, validation, refresh logic, and role-based access in a multi-tenant setup`,
+      `Integrated OpenAI APIs into enterprise Node.js applications using TypeScript, implementing AI-powered features for financial analysis and portfolio management with robust error handling and response validation`,
       `Implemented API testing with Postman and Swagger UI, ensuring seamless integration of React/Next.js frontend with backend REST services and validating complex financial data.`,
       `Integrated RESTful APIs using Axios for secure and efficient front-end/back-end communication.`,
       `Built interactive data visualizations with Plotly.js to enable effective analysis of complex datasets.`,
+      `Built enterprise-grade REST APIs using Node.js and NestJS framework with TypeScript, implementing modular architecture with dependency injection and decorator-based controllers.`
     ],
   },
   {
@@ -27,6 +29,7 @@ performance and SEO.`,
       `Integrated Google Analytics to monitor user interactions and visualize user flow across the app.`,
       `Reusable Component Library: Designed and developed a reusable component library for future use,
 resulting in a 40% reduction in development time for new projects.`,
+      `Unit and Integration Testing: Wrote comprehensive unit and integration tests using Jest and React Testing Library, achieving high test coverage and ensuring application reliability.`,
       `Led and contributed to technical discussions, facilitating stand-ups, sprint planning, and retrospectives.`,
     ],
   },

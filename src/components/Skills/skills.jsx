@@ -15,8 +15,8 @@ const Skills = () => {
         { name: "SCSS", level: "Advanced" },
         { name: "React.js", level: "Expert" },
         { name: "Next.js", level: "Advanced" },
-        { name: "Redux Toolkit", level: "Advanced" },
         { name: "Node.js", level: "Advanced" },
+        { name: "NestJS", level: "Intermediate" },
         { name: "React Native", level: "Intermediate" },
       ],
     },
@@ -42,6 +42,14 @@ const Skills = () => {
       ],
     },
     {
+      category: "AI Tools",
+      skills: [
+        { name: "OpenAI API", level: "Advanced" },
+        { name: "Claude API", level: "Advanced" },
+        { name: "TensorFlow.js", level: "Intermediate" },
+      ],
+    },
+    {
       category: "API & Auth Tools",
       skills: [
         { name: "OAuth 2.0", level: "Advanced" },
@@ -53,27 +61,15 @@ const Skills = () => {
       ],
     },
     {
-      category: "DevOps & Tools",
+      category: "DevOps & Other Tools",
       skills: [
         { name: "Git", level: "Advanced" },
         { name: "GitHub", level: "Advanced" },
         { name: "Azure Repos", level: "Intermediate" },
         { name: "Docker", level: "Intermediate" },
         { name: "Jenkins", level: "Intermediate" },
-        { name: "Grafana", level: "Intermediate" },
-        { name: "ELK Stack", level: "Intermediate" },
-      ],
-    },
-    {
-      category: "Other",
-      skills: [
-        { name: "WebSockets", level: "Intermediate" },
-        { name: "AEM CMS", level: "Intermediate" },
-        { name: "Jira", level: "Advanced" },
         { name: "Confluence", level: "Advanced" },
         { name: "MongoDB", level: "Advanced" },
-        { name: "Express.js", level: "Advanced" },
-        { name: "Responsive Design", level: "Expert" },
       ],
     },
   ];
@@ -88,10 +84,10 @@ const Skills = () => {
     };
 
     checkMobile();
-    
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const toggleMobileDropdown = () => {
@@ -125,14 +121,16 @@ const Skills = () => {
           {/* Mobile Dropdown */}
           {isMobile && (
             <div className="skills__mobile-dropdown">
-              <div 
-                className={`skills__mobile-selected ${isMobileDropdownOpen ? "active" : ""}`}
+              <div
+                className={`skills__mobile-selected ${
+                  isMobileDropdownOpen ? "active" : ""
+                }`}
                 onClick={toggleMobileDropdown}
               >
                 <span>{skillsData[selectedCategory].category}</span>
                 {isMobileDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
               </div>
-              
+
               {isMobileDropdownOpen && (
                 <div className="skills__mobile-options">
                   {skillsData.map((category, index) => (
