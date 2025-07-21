@@ -14,7 +14,7 @@ performance and SEO.`,
       `Implemented API testing with Postman and Swagger UI, ensuring seamless integration of React/Next.js frontend with backend REST services and validating complex financial data.`,
       `Integrated RESTful APIs using Axios for secure and efficient front-end/back-end communication.`,
       `Built interactive data visualizations with Plotly.js to enable effective analysis of complex datasets.`,
-      `Built enterprise-grade REST APIs using Node.js and NestJS framework with TypeScript, implementing modular architecture with dependency injection and decorator-based controllers.`
+      `Built enterprise-grade REST APIs using Node.js and NestJS framework with TypeScript, implementing modular architecture with dependency injection and decorator-based controllers.`,
     ],
   },
   {
@@ -56,6 +56,7 @@ resulting in a 40% reduction in development time for new projects.`,
     responsibilities: [
       `Involved in various phases of Software Development Life Cycle (SDLC) of the application like Requirement gathering, Design, Analysis and Code development.`,
       `Implemented SWR (Stale-While-Revalidate) in React applications using typescript, Nodejs for efficient and performant data fetching.`,
+      `Implemented real-time data communication using WebSocket in a React/Next.js front-end with a Node.js backend, enabling live updates and interactive user experiences without constant polling.`,
       `Implemented web performance optimization techniques, including lazy loading, code spliting, and image optimization, to improve website speed and user experience.`,
       `Contributed to the development of responsive and mobile-first designs`,
       `Gained experience with version control systems and collaborative development.`,

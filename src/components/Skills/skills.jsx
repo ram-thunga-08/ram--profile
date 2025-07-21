@@ -68,8 +68,9 @@ const Skills = () => {
         { name: "Azure Repos", level: "Intermediate" },
         { name: "Docker", level: "Intermediate" },
         { name: "Jenkins", level: "Intermediate" },
-        { name: "Confluence", level: "Advanced" },
-        { name: "MongoDB", level: "Advanced" },
+        { name: "PostgreSQL", level: "Advanced" },
+        { name: "WebSocket", level: "Intermediate" },
+        { name: "Confluence", level: "Advanced" }
       ],
     },
   ];
