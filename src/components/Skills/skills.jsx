@@ -12,7 +12,7 @@ const Skills = () => {
         { name: "TypeScript", level: "Advanced" },
         { name: "HTML5", level: "Expert" },
         { name: "CSS3", level: "Expert" },
-        { name: "SCSS", level: "Advanced" },
+        { name: "SASS", level: "Advanced" },
         { name: "React.js", level: "Expert" },
         { name: "Next.js", level: "Advanced" },
         { name: "Node.js", level: "Advanced" },
@@ -65,12 +65,12 @@ const Skills = () => {
       skills: [
         { name: "Git", level: "Advanced" },
         { name: "GitHub", level: "Advanced" },
-        { name: "Azure Repos", level: "Intermediate" },
+        { name: "Azure DevOps", level: "Advanced" },
         { name: "Docker", level: "Intermediate" },
         { name: "Jenkins", level: "Intermediate" },
         { name: "PostgreSQL", level: "Advanced" },
-        { name: "WebSocket", level: "Intermediate" },
-        { name: "Confluence", level: "Advanced" }
+        { name: "AWS", level: "Intermediate" },
+        { name: "Confluence", level: "Intermediate" }
       ],
     },
   ];
